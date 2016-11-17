@@ -17,6 +17,8 @@ namespace ProjectLesson10.Models
 
         public int ArtistId { get; set; }
 
+        [Required]
+        [Display(Name = "Artist Name")]
         [StringLength(120)]
         public string Name { get; set; }
 
