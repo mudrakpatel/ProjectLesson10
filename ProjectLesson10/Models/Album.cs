@@ -17,7 +17,13 @@ namespace ProjectLesson10.Models
         {
             this.Title = title;
         }
+        /// <summary>
+        /// This is an empty Album constructor
+        /// </summary>
+        public Album()
+        {
 
+        }
 
         public int AlbumId { get; set; }
 
@@ -25,6 +31,7 @@ namespace ProjectLesson10.Models
 
         public int ArtistId { get; set; }
 
+        [Display(Name = "Album Title")]
         [Required]
         [StringLength(160)]
         public string Title { get; set; }

@@ -1,14 +1,13 @@
 ﻿@model IEnumerable<ProjectLesson10.Models.Genre>
 
+@*@model IEnumerable<Genre>*@
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Genre List";
 }
 
-<h2>Index</h2>
+<h2>Genre List</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -20,20 +19,20 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GenreId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GenreId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GenreId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.GenreId })
+            </td>
+        </tr>
+    }
 
 </table>
+
